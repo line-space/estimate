@@ -230,7 +230,7 @@ function photoFileError(file){
 function setPhotoProcessing(value){
   photoProcessing=value;
   $('#next').disabled=value||state.busy;$('#prev').disabled=value||state.busy;
-  $('input[type=file],button',$('#photos')).forEach(el=>el.disabled=value);
+  $$('input[type=file],button',$('#photos')).forEach(el=>el.disabled=value);
 }
 function renderPhotos(msgs={}){
   const root=$('#photos');
