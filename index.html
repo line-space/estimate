@@ -65,7 +65,7 @@
         <div class="hp" aria-hidden="true"><label>웹사이트<input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
       </section>
       <section data-step="1" class="hidden">
-        <div class="field"><span class="label">줄눈재 선택 <span class="req">필수</span></span><div class="option-grid"><div class="pick has-help"><input type="radio" name="groutMaterial" id="material-poly" value="폴리우레아(유광)"><label for="material-poly"><span>폴리우레아<span class="sub">(유광)</span></span><button type="button" class="help-btn" aria-label="폴리우레아 설명 보기" aria-controls="help-poly" aria-expanded="false"><svg aria-hidden="true" focusable="false"><use href="#i-help"/></svg></button></label><div class="help-tip" id="help-poly" role="note" hidden>반짝이는 광택감이 살아 있는 마감으로, 합리적인 비용 덕분에 많은 분들이 선택하는 편입니다.</div></div><div class="pick has-help tip-right"><input type="radio" name="groutMaterial" id="material-aspa" value="아스팍톤(무광)"><label for="material-aspa"><span>아스팍톤<span class="sub">(무광)</span></span><button type="button" class="help-btn" aria-label="아스팍톤 설명 보기" aria-controls="help-aspa" aria-expanded="false"><svg aria-hidden="true" focusable="false"><use href="#i-help"/></svg></button></label><div class="help-tip" id="help-aspa" role="note" hidden>차분하고 매트한 질감의 에폭시 마감이며, 유광보다 견적이 높은 편입니다.</div></div><div class="pick wide"><input type="radio" name="groutMaterial" id="material-unknown" value="잘 모르겠음 (추천 요청)"><label for="material-unknown">잘 모르겠음 (추천 요청)</label></div></div><p class="hint">고르기 어려우시면 '잘 모르겠음'을 선택해 주세요.</p><p class="error" id="err-material" aria-live="polite"></p></div>
+        <div class="field"><span class="label">줄눈재 선택 <span class="req">필수</span></span><div class="option-grid"><div class="pick has-help"><input type="radio" name="groutMaterial" id="material-poly" value="폴리우레아(유광)"><label for="material-poly"><span>폴리우레아<span class="sub">(유광)</span></span><button type="button" class="help-btn" aria-label="폴리우레아 설명 보기" aria-controls="help-poly" aria-expanded="false"><svg aria-hidden="true" focusable="false"><use href="#i-help"/></svg></button></label><div class="help-tip" id="help-poly" role="note" hidden>반짝이는 광택감이 살아 있는 마감으로, 합리적인 비용 덕분에 많은 분들이 선택하는 편입니다.<br>예상 사용 기간은 약 5~10년이며, 시공 후 약 10시간이 지나면 사용 가능합니다.<br><br>※ 사용 기간은 사용 환경과 관리 상태에 따라 달라질 수 있습니다.</div></div><div class="pick has-help tip-right"><input type="radio" name="groutMaterial" id="material-aspa" value="아스팍톤(무광)"><label for="material-aspa"><span>아스팍톤<span class="sub">(무광)</span></span><button type="button" class="help-btn" aria-label="아스팍톤 설명 보기" aria-controls="help-aspa" aria-expanded="false"><svg aria-hidden="true" focusable="false"><use href="#i-help"/></svg></button></label><div class="help-tip" id="help-aspa" role="note" hidden>차분하고 매트한 질감의 에폭시 마감이며, 유광보다 견적이 높은 편입니다.<br>반영구적인 사용을 기대할 수 있으며, 시공 후 약 24시간이 지나면 사용 가능합니다.<br><br>※ 사용 기간은 사용 환경과 관리 상태에 따라 달라질 수 있습니다.</div></div><div class="pick wide"><input type="radio" name="groutMaterial" id="material-unknown" value="잘 모르겠음 (추천 요청)"><label for="material-unknown">잘 모르겠음 (추천 요청)</label></div></div><p class="hint">고르기 어려우시면 '잘 모르겠음'을 선택해 주세요.</p><p class="error" id="err-material" aria-live="polite"></p></div>
         <div class="notice"><strong>시공을 희망하는 항목을 모두 선택해 주세요.</strong><br>여러 항목을 한 번에 선택할 수 있습니다. 선택한 항목마다 세부 범위와 타일 크기를 아래에서 입력해 주세요.</div>
         <div class="field" style="margin-top:20px"><span class="label">시공 범위 <span class="req">하나 이상 선택</span></span><div class="option-grid" id="roomChoices"></div><p class="error" id="err-rooms" aria-live="polite"></p></div>
         <div id="rooms" style="margin-top:18px"></div><p class="hint">타일 크기를 모르셔도 괜찮습니다. 현장 사진을 함께 남겨주세요.</p>
@@ -89,14 +89,14 @@
 <footer class="footer"><b>선과공간</b>깨끗한 선, 달라지는 공간.<div class="meta" id="footMeta"></div></footer>
 <script>
 'use strict';
-/* ===== 운영자 설정 (필요한 항목만 채우면 페이지에 자동 표시됩니다) ===== */
+
 const CONFIG = {
-  endpoint: 'https://script.google.com/macros/s/AKfycbxy1rKu62xuGiNJgiDQq0ehbfbaYhqP5HXd8lb1yOUV4kGGJw2CeYK2YZqqN2w3KJKA/exec',      // 구글시트(Apps Script) 연동 주소 - 연동 단계에서 입력
+  endpoint: 'https://script.google.com/macros/s/AKfycbxy1rKu62xuGiNJgiDQq0ehbfbaYhqP5HXd8lb1yOUV4kGGJw2CeYK2YZqqN2w3KJKA/exec',     
   senderPhone: '',   // 견적 문자 발신번호 예: '010-0000-0000'
-  replyTime: '',     // 견적 안내 시간 예: '영업일 기준 24시간 이내'
+  replyTime: '',     
   blogUrl: '',       // 시공 사례 블로그 주소 (https://...)
   privacyUrl: '',    // 개인정보 처리방침 주소 (https://...)
-  businessInfo: ''   // 푸터에 표시할 사업자 정보 예: '선과공간 | 대표 ○○○ | 사업자등록번호 000-00-00000'
+  businessInfo: ''   // 푸터에 표시할 사업자 정보 
 };
 /* ======================================================================= */
 const ROOM_TYPES=['거실 욕실','안방 욕실','현관바닥','베란다(세탁실&다용도실 포함)','실리콘 코팅','기타'];
@@ -230,7 +230,7 @@ function photoFileError(file){
 function setPhotoProcessing(value){
   photoProcessing=value;
   $('#next').disabled=value||state.busy;$('#prev').disabled=value||state.busy;
-  document.querySelectorAll('#photos input[type=file],#photos button').forEach(el=>el.disabled=value);
+  $('input[type=file],button',$('#photos')).forEach(el=>el.disabled=value);
 }
 function renderPhotos(msgs={}){
   const root=$('#photos');
